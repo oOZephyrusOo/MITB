@@ -181,7 +181,7 @@
                         <label for="amazon-coupon" class="font-bold">Amazon</label>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="navigateToTripPage()">
                             Scan
                         </button>
                         <button onclick="toggleBookmark(event)" class="bookmark-btn p-2 border-2 border-black rounded-md bg-transparent text-black">
@@ -197,7 +197,7 @@
                         <label for "walmart-coupon" class="font-bold">Walmart</label>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="navigateToTripPage()">
                             Scan
                         </button>
                         <button onclick="toggleBookmark(event)" class="bookmark-btn p-2 border-2 border-black rounded-md bg-transparent text-black">
@@ -213,7 +213,7 @@
                         <label for="sephora-coupon" class="font-bold">Sephora</label>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="navigateToTripPage()">
                             Scan
                         </button>
                         <button onclick="toggleBookmark(event)" class="bookmark-btn p-2 border-2 border-black rounded-md bg-transparent text-black">
@@ -228,6 +228,12 @@
             <button class="create-trip-btn" onclick="navigateToTripPage()">
                 Create Trip +
             </button>
+            <!-- Add Coupons Button -->
+            <div class="add-button">
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="navigateToAddCouponPage()">
+                    Add Coupons +
+                </button>
+            </div>
             <!-- Footer with Homepage Button -->
             <footer class="text-center my-6">
                 <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
@@ -345,7 +351,7 @@
             </div>
             <!-- Add Coupons Button -->
             <div class="add-button">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="navigateToAddCouponPage()">
                     Add Coupons +
                 </button>
             </div>
@@ -357,6 +363,38 @@
             </footer>
         </div>
 
+        <!-- Add Coupon Page-->
+        <div id="add-coupon-page" class="container mx-auto p-4 hidden">
+            <div class="add-coupon-page-container">
+                <!-- Navigation Bar -->
+                <nav class="flex items-center justify-between border-b-2 py-4">
+                    <button class="text-gray-600 hover:text-gray-800">
+                        <span>&larr; Back</span>
+                    </button>
+                    <div class="text-xl font-bold">MITB</div>
+                    <button class="text-gray-600 hover:text-gray-800">
+                        <span>Forward &rarr;</span>
+                    </button>
+                </nav>
+                <!-- Add Coupon Page Container -->
+                <div class="trip-page-container">
+                    <h1 class="trip-page-title">Add Coupon</h1>
+                    <!-- Coupon Input Card -->
+                    <div class="coupon-card">
+                        <div class="coupon-store-name">Camera</div>
+                        <!-- Placeholder for camera input -->
+                        <div class="bg-gray-200 h-48 flex items-center justify-center">
+                            <span class="text-gray-500">Camera Placeholder</span>
+                        </div>
+                        <input type="text" placeholder="Code Input" class="input-field">
+                    </div>
+                    <!-- Add Coupon Button -->
+                    <button class="footer-button">Complete Coupon</button>
+                    <!-- Homepage Button -->
+                    <a href="/" class="footer-button">Homepage</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Friends Page -->
         <div id="friends" class="container mx-auto p-4 hidden">
@@ -491,7 +529,53 @@
                         <div class="text-xl font-bold mt-2">37</div>
                     </div>
                     <div class="bg-white p-4 shadow rounded-lg">
-                        <button class="profile-button" onclick="navigateTo('trip-history')">Trip History</button>
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="navigateTo('trip-history')">Trip History</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Footer with Homepage Button -->
+            <footer class="text-center mt-6">
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="navigateToHome()">
+                    Homepage
+                </button>
+            </footer>
+        </div>
+
+
+        <!-- Trip History Page -->
+        <div id="trip-history" class="container mx-auto p-4 hidden">
+            <!-- Navigation Bar -->
+            <nav class="flex items-center justify-between border-b-2 py-4">
+                <button class="text-gray-600 hover:text-gray-800" onclick="navigateBack()">
+                    <span>&larr; Back</span>
+                </button>
+                <div class="text-xl font-bold">MITB</div>
+                <button class="text-gray-600 hover:text-gray-800" onclick="navigateForward()">
+                    <span>Forward &rarr;</span>
+                </button>
+            </nav>
+            <!-- Trip History Content -->
+            <div class="text-center my-6">
+                <h1 class="text-3xl font-semibold">Trip History</h1>
+                <div class="mt-4">
+                    <div class="trip-history-item">
+                        <div class="text-lg font-semibold">Date</div>
+                        <div class="text-xl font-bold mt-2">10/7</div>
+                        <div class="mt-1">Coupons Used: 3</div>
+                        <div>Money Saved: $32.24</div>
+                    </div>
+                    <div class="trip-history-item">
+                        <div class="text-lg font-semibold">Date</div>
+                        <div class="text-xl font-bold mt-2">9/23</div>
+                        <div class="mt-1">Coupons Used: 2</div>
+                        <div>Money Saved: $21.02</div>
+                    </div>
+                    <div class="trip-history-item">
+                        <div class="text-lg font-semibold">Date</div>
+                        <div class="text-xl font-bold mt-2">9/3</div>
+                        <div class="mt-1">Coupons Used: 4</div>
+                        <div>Money Saved: $63.24</div>
                     </div>
                 </div>
             </div>
@@ -542,7 +626,13 @@
         function navigateToTripPage() {
             document.getElementById('physical-coupons').classList.add('hidden');
             document.getElementById('trip-page').classList.remove('hidden');
-                    }
+        }
+        // Script to navigate to the add coupons page
+        function navigateToAddCouponPage() {
+            document.getElementById('physical-coupons').classList.add('hidden');
+            document.getElementById('online-coupons').classList.add('hidden');
+            document.getElementById('add-coupon-page').classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
