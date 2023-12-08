@@ -167,12 +167,17 @@
                     <span>Forward &rarr;</span>
                 </button>
             </nav>
-
             <!-- Page Title -->
             <header class="text-center my-6">
                 <h1 class="text-3xl font-semibold">Physical Coupons</h1>
             </header>
-
+            <!-- Search Bar -->
+            <div class="search-bar-container flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <input type="text" placeholder="Search" class="input-field flex-grow p-2">
+                <button class="search-btn bg-blue-500 hover:bg-blue-700 text-white p-2">
+                    Search
+                </button>
+            </div>
             <!-- Coupons List with Bookmark Button -->
             <div class="space-y-4">
                 <div class="flex justify-between items-center">
@@ -234,12 +239,6 @@
                     Add Coupons +
                 </button>
             </div>
-            <!-- Footer with Homepage Button -->
-            <footer class="text-center my-6">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
-                    Homepage
-                </button>
-            </footer>
         </div>
 
 
@@ -262,8 +261,6 @@
                         <img src="https://dummyimage.com/24x24/000/fff&text=>" alt="Next Coupon">
                     </button>
                 </div>
-                <!-- Homepage Button -->
-                <a href="/" class="footer-button">Homepage</a>
             </div>
         </div>
 
@@ -284,6 +281,13 @@
             <header class="text-center my-6">
                 <h1 class="text-3xl font-semibold">Online Coupons</h1>
             </header>
+            <!-- Search Bar -->
+            <div class="search-bar-container flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <input type="text" placeholder="Search" class="input-field flex-grow p-2">
+                <button class="search-btn bg-blue-500 hover:bg-blue-700 text-white p-2">
+                    Search
+                </button>
+            </div>
             <!-- Coupons Table -->
             <div class="overflow-x-auto mb-6">
                 <table class="min-w-full bg-white">
@@ -355,12 +359,6 @@
                     Add Coupons +
                 </button>
             </div>
-            <!-- Footer with Homepage Button -->
-            <footer class="text-center">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="navigateToHome()">
-                    Homepage
-                </button>
-            </footer>
         </div>
 
         <!-- Add Coupon Page-->
@@ -386,8 +384,11 @@
                         <div class="bg-gray-200 h-48 flex items-center justify-center">
                             <span class="text-gray-500">Camera Placeholder</span>
                         </div>
-                        <input type="text" placeholder="Code Input" class="input-field">
                     </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="flex items-center justify-center">Type Coupon Here</div>
+                        <input type="text" placeholder="Code Input" class="input-field">
+                    </div>                    
                     <!-- Add Coupon Button -->
                     <button class="footer-button">Complete Coupon</button>
                     <!-- Homepage Button -->
@@ -412,6 +413,13 @@
             <header class="text-center my-6">
                 <h1 class="text-3xl font-semibold">Friends</h1>
             </header>
+            <!-- Search Bar -->
+            <div class="search-bar-container flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <input type="text" placeholder="Search" class="input-field flex-grow p-2">
+                <button class="search-btn bg-blue-500 hover:bg-blue-700 text-white p-2">
+                    Search
+                </button>
+            </div>
             <!-- Friends Table -->
             <div class="overflow-x-auto mb-6">
                 <table class="min-w-full bg-white">
@@ -485,16 +493,11 @@
             </div>
             <!-- Add Friend Button -->
             <div class="add-button">
+                <input type="text" placeholder="Username Input" class="input-field">
                 <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                     Add Friend +
                 </button>
             </div>
-            <!-- Footer with Homepage Button -->
-            <footer class="text-center mt-6">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="navigateToHome()">
-                    Homepage
-                </button>
-            </footer>
         </div>
 
 
@@ -534,12 +537,6 @@
                     
                 </div>
             </div>
-            <!-- Footer with Homepage Button -->
-            <footer class="text-center mt-6">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="navigateToHome()">
-                    Homepage
-                </button>
-            </footer>
         </div>
 
 
@@ -555,6 +552,13 @@
                     <span>Forward &rarr;</span>
                 </button>
             </nav>
+            <!-- Search Bar -->
+            <div class="search-bar-container flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                <input type="text" placeholder="Search" class="input-field flex-grow p-2">
+                <button class="search-btn bg-blue-500 hover:bg-blue-700 text-white p-2">
+                    Search
+                </button>
+            </div>
             <!-- Trip History Content -->
             <div class="text-center my-6">
                 <h1 class="text-3xl font-semibold">Trip History</h1>
@@ -579,12 +583,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Footer with Homepage Button -->
-            <footer class="text-center mt-6">
-                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="navigateToHome()">
-                    Homepage
-                </button>
-            </footer>
         </div>
         <!-- Other pages (Physical Coupons, Online Coupons, Friends) would be similar to the previous HTML structure -->
     </div>
